@@ -67,6 +67,9 @@ Create Task
 
 ![Screenshot 2024-12-30 120118](https://github.com/user-attachments/assets/c5581f06-6932-41d5-b733-0a4ee1b38f24)
 
+View Task
+
+![Screenshot 2024-12-30 141700](https://github.com/user-attachments/assets/f2615119-1dd2-4dee-88af-cddc3ad3dae9)
 
 
 Edit Task
