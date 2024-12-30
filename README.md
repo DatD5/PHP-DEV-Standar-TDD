@@ -6,6 +6,21 @@ Getting Started
 
     'git clone https://github.com/DatD5/PHP-DEV-Standar-TDD-.git'
     php artisan serv
+    
+DB_CONNECTION=mysql
+
+DB_HOST=127.0.0.1
+
+DB_PORT=3306
+
+DB_DATABASE=task-management
+
+DB_USERNAME=root
+
+DB_PASSWORD=
+
+![Screenshot 2024-12-30 141951](https://github.com/user-attachments/assets/796fe3d9-c6f5-43b1-abb9-eda92364bacf)
+
 
 Tools/commands used
 
@@ -38,7 +53,7 @@ Creating feature Test
     php artisan make:test EditTaskTest
     php artisan make:test GetListTaskTest
     php artisan make:test ViewTaskTest
-    \
+    
 Create tasks
 
     cd resources/views/tasks
