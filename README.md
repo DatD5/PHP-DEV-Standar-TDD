@@ -5,7 +5,7 @@ PHP-DEV-Standar-TDD
 Getting Started
 
     'git clone https://github.com/DatD5/PHP-DEV-Standar-TDD-.git'
-    php artisan serv
+    php artisan serve
     
 DB_CONNECTION=mysql
 
