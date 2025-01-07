@@ -27,7 +27,7 @@ Tools/commands used
 Create Migration:
 
     php artisan make:migration create_tasks_table
-    php artisan make:migrate
+    php artisan migrate
     
 Tạo Model và Controller:
 
