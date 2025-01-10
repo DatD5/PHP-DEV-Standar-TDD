@@ -31,13 +31,16 @@ Create Migration:
     
 Tạo Model và Controller:
 
-    php artisan make:model Task
+    php artisan make:model TaskController
     php artisan make:controller Task
 
 Create Form Request Validation
 
     php artisan make:request CreateTaskRequest
     php artisan make:request UpdateTaskRequest
+    php artisan make:request CreateUserRequest
+    php artisan make:request UpdateUserRequest
+
 
 Create Factory and Seed dữ liệu mẫu
 
@@ -45,6 +48,7 @@ Create Factory and Seed dữ liệu mẫu
     php artisan tinker
     App\Models\Task::factory(100)->create()
     App\Models\User::factory()->create(['password'=>bcrypt(12345678)]
+     App\Models\User::factory(100)->create()
     
 Creating feature Test
 
@@ -57,10 +61,11 @@ Creating feature Test
 Create tasks
 
     cd resources/views/tasks
-    mkdir create.blade.php
-    mkdir edit.blade.php
-    mkdir index.blade.php
-    mkdir show.blade.php
+    touch create.blade.php
+         edit.blade.php
+         index.blade.php
+         show.blade.php
+    
 Install Laravel UI and Auth
 
     composer require laravel/ui
