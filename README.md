@@ -1,67 +1,93 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+NGUYỄN TIẾN ĐẠT
+PHP-DEV-Standar-TDD
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
+Getting Started
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+    'git clone https://github.com/DatD5/PHP-DEV-Standar-TDD-.git'
+    php artisan serve
+    
+DB_CONNECTION=mysql
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+DB_HOST=127.0.0.1
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+DB_PORT=3306
 
-## Learning Laravel
+DB_DATABASE=task-management
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+DB_USERNAME=root
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+DB_PASSWORD=
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+![Screenshot 2024-12-30 141951](https://github.com/user-attachments/assets/796fe3d9-c6f5-43b1-abb9-eda92364bacf)
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Tools/commands used
 
-### Premium Partners
+Create Migration:
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+    php artisan make:migration create_tasks_table
+    php artisan migrate
+    
+Tạo Model và Controller:
 
-## Contributing
+    php artisan make:model Task
+    php artisan make:controller Task
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Create Form Request Validation
 
-## Code of Conduct
+    php artisan make:request CreateTaskRequest
+    php artisan make:request UpdateTaskRequest
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Create Factory and Seed dữ liệu mẫu
 
-## Security Vulnerabilities
+    php artisan make:factory TaskFactory
+    php artisan tinker
+    App\Models\Task::factory(100)->create()
+    App\Models\User::factory()->create(['password'=>bcrypt(12345678)]
+    
+Creating feature Test
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+    php artisan make:test CreateNewTaskTest
+    php artisan make:test DeleteTaskTest
+    php artisan make:test EditTaskTest
+    php artisan make:test GetListTaskTest
+    php artisan make:test ViewTaskTest
+    
+Create tasks
 
-## License
+    cd resources/views/tasks
+    mkdir create.blade.php
+    mkdir edit.blade.php
+    mkdir index.blade.php
+    mkdir show.blade.php
+Install Laravel UI and Auth
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-# PHP-DEV-Standar-TDD-
+    composer require laravel/ui
+    php artisan ui vue --auth
+    npm install; npm run dev
+    
+Run TEST
+
+    php artisan test --filter test
+
+Run
+List Task
+
+![Screenshot 2024-12-30 111938](https://github.com/user-attachments/assets/be436ce2-2c25-4680-bfd1-edd5f50131a3)
+
+
+
+Create Task
+
+![Screenshot 2024-12-30 120118](https://github.com/user-attachments/assets/c5581f06-6932-41d5-b733-0a4ee1b38f24)
+
+View Task
+
+![Screenshot 2024-12-30 141700](https://github.com/user-attachments/assets/f2615119-1dd2-4dee-88af-cddc3ad3dae9)
+
+
+Edit Task
+
+![Screenshot 2024-12-30 140817](https://github.com/user-attachments/assets/e03eddab-5d06-403b-b4a8-26c37d472dec)
+
