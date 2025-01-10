@@ -2,16 +2,16 @@
 
 @section('content')
 <div class="container">
-    <h1>Thông tin người dùng</h1>
+    <h1>Users information</h1>
     <div class="mb-3">
         <strong>ID:</strong> {{ $user->id }}
     </div>
     <div class="mb-3">
-        <strong>Tên:</strong> {{ $user->name }}
+        <strong>Name:</strong> {{ $user->name }}
     </div>
     <div class="mb-3">
         <strong>Email:</strong> {{ $user->email }}
     </div>
-    <a href="{{ route('users.index') }}" class="btn btn-secondary">Quay lại</a>
+    <a href="{{ route('users.index') }}" class="btn btn-secondary">Back</a>
 </div>
 @endsection

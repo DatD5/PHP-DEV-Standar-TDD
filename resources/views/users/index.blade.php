@@ -2,15 +2,15 @@
 
 @section('content')
 <div class="container">
-    <h1>Danh sách người dùng</h1>
-    <a href="{{ route('users.create') }}" class="btn btn-primary mb-3">Thêm người dùng</a>
+    <h1>Users list</h1>
+    <a href="{{ route('users.create') }}" class="btn btn-primary mb-3">Create user</a>
     <table class="table table-bordered">
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Tên</th>
+                <th>Name</th>
                 <th>Email</th>
-                <th>Hành động</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -20,12 +20,12 @@
                     <td>{{ $user->name }}</td>
                     <td>{{ $user->email }}</td>
                     <td>
-                        <a href="{{ route('users.show', $user->id) }}" class="btn btn-info btn-sm">Xem</a>
-                        <a href="{{ route('users.edit', $user->id) }}" class="btn btn-warning btn-sm">Sửa</a>
+                        <a href="{{ route('users.show', $user->id) }}" class="btn btn-info btn-sm">Show</a>
+                        <a href="{{ route('users.edit', $user->id) }}" class="btn btn-warning btn-sm">Edit</a>
                         <form action="{{ route('users.destroy', $user->id) }}" method="POST" style="display:inline-block;">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc chắn muốn xóa?')">Xóa</button>
+                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc chắn muốn xóa?')">Delete</button>
                         </form>
                     </td>
                 </tr>
